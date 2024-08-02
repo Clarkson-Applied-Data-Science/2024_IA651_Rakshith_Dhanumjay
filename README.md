@@ -81,7 +81,7 @@ Repository for final project from Rakshith and Dhanumjay
         <li><strong>CURRENT_HOUSE_YRS</strong>: Number of years spent in the current house.</li>
         <li><strong>Risk_Flag</strong> (Training Data Only): Indicator of risk (1 for risk, 0 for no risk).</li>
     </ul>
-    <h4>DATA PREPROCESSING</h4>
+    <h3>DATA PREPROCESSING</h3>
     <p>Prior to model training and validation, several essential preprocessing steps were carried out to ensure data quality and integrity:</p>
     <ul>
         <li><strong>Handling Missing Values</strong>: Any missing values within the datasets were identified and addressed through removal or imputation techniques to maintain dataset completeness.</li>
@@ -111,7 +111,7 @@ Repository for final project from Rakshith and Dhanumjay
     <li>The dataset is evenly distributed across income levels, with no significant skew.</li>
     <li>Income alone may not be a distinguishing factor without considering other variables.</li>
 </ul>
-
+<h3> DATA VISULAISATION </h3>
 <h4>Age Distribution</h4>
         <p>The histogram shows the distribution of ages in the dataset, ranging from <span class="highlight">20 to 80 years</span>. The age groups are relatively evenly distributed, with each bin containing around <span class="highlight">20,000 to 25,000 individuals</span>. There's a slight dip in the <span class="highlight">40s and 50s</span> age bins, while the <span class="highlight">60s</span> have the highest count, exceeding 25,000 individuals. This balanced distribution suggests a well-represented dataset across different age groups, though the dip in the 40s and 50s may warrant further investigation.</p>
  <h4>Experience Distribution</h4>
@@ -349,6 +349,7 @@ while 'house_ownership' can be one hot encoded and other variables will be targe
 
 <p>This analysis highlighted significant correlations among the variables.</p>
 
+<h3> MODEL TRAINING </h3>
 <h4>Splitting the Dataset into Training and Testing Sets</h4>
 <p>The dataset was split into features (X) and the target variable (y) by separating the <code>risk_flag</code> column. The data was then divided into training (80%) and testing (20%) sets for model evaluation, ensuring reproducibility with a specified <code>random_state</code>.</p>
 <h4>Mapping Categorical Values to Numerical Values</h4>
@@ -357,7 +358,7 @@ while 'house_ownership' can be one hot encoded and other variables will be targe
 <p>Target encoding was applied to the <code>profession</code>, <code>city</code>, and <code>state</code> columns using the <code>TargetEncoder</code> from the <code>category_encoders</code> library. The encoder was fitted on the training data and subsequently used to transform both the training and test datasets based on the target variable.</p>
 <h4>One-Hot Encoding of House Ownership</h4>
 <p>The <code>house_ownership</code> column was one-hot encoded using the <code>OneHotEncoder</code> from scikit-learn. This process involved fitting the encoder on the training data, transforming both the training and test sets, and replacing the original column with the encoded features.</p>
-<h4>Evaluation Metrics for Model Performance</h4>
+<h3>MODEL EVALUATION </h3>
 <p>A function was defined to print key evaluation metrics, including the classification report and confusion matrix. These metrics provide insights into the model's precision, recall, F1-score, and the distribution of true vs. predicted classifications.</p>
 <h4>Logistic Regression Model Training and Evaluation</h4>
 <p>A Logistic Regression model was trained using the training data with a maximum of 500,000 iterations for convergence. The model's accuracy on the test set was calculated and expressed as a percentage, indicating the proportion of correctly classified instances.</p>
@@ -411,7 +412,7 @@ while 'house_ownership' can be one hot encoded and other variables will be targe
 <p>The predicted risk flags were added to the original dataset as a new column. The predictions, stored in <code>y_pred</code>, were converted into a pandas Series and combined with the existing data, creating a new DataFrame that includes both the original features and the predicted outcomes. This new dataset can be optionally saved to a CSV file for further analysis or reporting.</p>
 <h4>Saving and Loading the Model with Pickle</h4>
 <p>The trained Random Forest model was serialized and saved using the <code>pickle</code> library. The model can be reloaded for future predictions. An example prediction was made using specified input values for features such as income, age, experience, profession, city, state, current job years, and current house years.</p>
-<h4>Conclusion</h4>
+<h3>Conclusion</h3>
 <p>The project successfully developed and evaluated several machine learning models for predicting the risk of loan defaults based on a variety of socio-economic and demographic factors. Through extensive data preprocessing, including handling missing values, encoding categorical variables, scaling numerical features, and applying SMOTE for class balancing, a robust dataset was prepared. Various models, such as Logistic Regression, K-Nearest Neighbors, Gradient Boosting, and Random Forest, were trained and evaluated.</p>
 
 <p>The Random Forest Classifier emerged as one of the best-performing models, achieving a high accuracy and balanced precision-recall scores across both risk and non-risk classes. Hyperparameter tuning using GridSearchCV further optimized the model's performance, identifying the most effective parameter configurations.</p>
