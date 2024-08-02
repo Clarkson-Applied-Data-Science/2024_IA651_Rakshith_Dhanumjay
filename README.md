@@ -412,7 +412,7 @@ while 'house_ownership' can be one hot encoded and other variables will be targe
 <p>The predicted risk flags were added to the original dataset as a new column. The predictions, stored in <code>y_pred</code>, were converted into a pandas Series and combined with the existing data, creating a new DataFrame that includes both the original features and the predicted outcomes. This new dataset can be optionally saved to a CSV file for further analysis or reporting.</p>
 <h4>Saving and Loading the Model with Pickle</h4>
 <p>The trained Random Forest model was serialized and saved using the <code>pickle</code> library. The model can be reloaded for future predictions. An example prediction was made using specified input values for features such as income, age, experience, profession, city, state, current job years, and current house years.</p>
-<h3>Conclusion</h3>
+<h3>CONCLUSION</h3>
 <p>The project successfully developed and evaluated several machine learning models for predicting the risk of loan defaults based on a variety of socio-economic and demographic factors. Through extensive data preprocessing, including handling missing values, encoding categorical variables, scaling numerical features, and applying SMOTE for class balancing, a robust dataset was prepared. Various models, such as Logistic Regression, K-Nearest Neighbors, Gradient Boosting, and Random Forest, were trained and evaluated.</p>
 
 <p>The Random Forest Classifier emerged as one of the best-performing models, achieving a high accuracy and balanced precision-recall scores across both risk and non-risk classes. Hyperparameter tuning using GridSearchCV further optimized the model's performance, identifying the most effective parameter configurations.</p>
