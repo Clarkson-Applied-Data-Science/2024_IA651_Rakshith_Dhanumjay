@@ -5,7 +5,7 @@ Repository for final project from Rakshith and Dhanumjay
 <H2> FINAL PROJECT IA651</H2>
 <H4> RAKSHITH AND DHANUMJAY </H4>
 
-<h4>ABSTRACT</h4>
+<h3>ABSTRACT</h3>
         <p>In today's fast-paced world, accurate risk assessment is crucial for financial institutions to mitigate potential losses and ensure sustainable growth. This project focuses on developing a robust machine learning model to predict the risk associated with individuals based on various socio-economic and demographic factors. The dataset used comprises detailed information on individuals' <span class="highlight">income, age, experience, marital status, house and car ownership, profession, city, state, current job years,</span> and <span class="highlight">current house years.</span></p>
         <p>The training dataset includes a 'Risk_Flag' which indicates whether an individual is considered a risk or not. By analyzing this dataset, we aim to uncover patterns and relationships between the input features and the risk flag. The test dataset, devoid of the risk flag, is utilized to validate the model's predictive power.</p>
         <p>In this study, we employ a range of machine learning algorithms to identify the most effective model for risk prediction. The results of this project are expected to provide valuable insights for financial institutions, helping them to better assess and manage potential risks associated with their clients.</p>
@@ -51,7 +51,7 @@ Repository for final project from Rakshith and Dhanumjay
             </ul>
         </li>
     </ul> 
-<h4>Introduction</h4>
+<h3>Introduction</h3>
     <p>In the financial sector, accurate risk assessment is essential for mitigating potential losses and ensuring sustainable growth. With the increasing availability of diverse data sources, machine learning has become a powerful tool for predicting risk and making informed decisions. This project aims to develop a robust machine learning model to predict the risk associated with individuals based on a variety of socio-economic and demographic factors.</p>
     <p>The dataset utilized in this project includes detailed information on individuals' income, age, experience, marital status, house and car ownership, profession, city, state, current job years, and current house years. By analyzing these features, the goal is to uncover patterns and relationships that can effectively predict whether an individual poses a risk.</p>
     <p>Through data preprocessing, feature engineering, and the development of various machine learning models, this project seeks to identify the most accurate and generalizable model. The findings and insights derived from this model will provide valuable tools for financial institutions to better assess and manage potential risks associated with their clients.</p>
@@ -66,7 +66,7 @@ Repository for final project from Rakshith and Dhanumjay
                 <li><strong>Purpose</strong>: The training data is used to develop and train machine learning models aimed at predicting the risk flag based on the provided features.</li>
             </ul>
         </li>
-    <h4>DATA FEATURES</h4>
+    <h3>DATA FEATURES</h3>
     <ul>
         <li><strong>Income</strong>: Annual income of the individual.</li>
         <li><strong>Age</strong>: Age of the individual.</li>
